@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
+
+	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/widget"
 )
 
 type Board struct {
@@ -104,6 +107,15 @@ func (b *Board) MakeANewNum() {
 }
 
 func main() {
+	a := app.New()
+	w := a.NewWindow("Hello World")
+
+	w.SetContent(widget.NewLabel("Hello World!"))
+	w.ShowAndRun()
+
+}
+
+func Start_game() {
 	brd := Board{}
 	var x string
 	var ans bool
